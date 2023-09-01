@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout | 3</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: editorial new light;
+            font-size: 25px;
+        }
+        .aside-left, .aside-center, .aside-right{
+            height: 100%;
+        }
+        .aside-left, .aside-right{
+            width: calc(100%/3);
+        }
+        .aside-center{
+            width: calc(100%);
+        }
+        .aside-left {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .aside-left div{
+            height: calc(100%/3);
+            /* border: 1px solid; */
+        }
+        .aside-center div{
+            height: calc(100%/5);
+            /* border: 1px solid ; */
+        }
+        .aside-right div{
+            height: calc(100%/2);
+        }
+        .aside-right{
+            overflow: hidden;
+        }
+        .aside-right .upper div{
+            height: 100%;
+            width: calc(100%);
+        }
+        .aside-right .lower div{
+            height: 100%;
+            margin-top: 5px;
+        }
+        .aside-right .upper .categories div{
+            height: calc(100%/5);
+        }
+    </style>
+</head>
+
+<body style="height: 100vh; width: 100vw; padding: 15px;">
+
+    <header style="background-color: #58CFB3; height: 12%; display: flex; justify-content: center; align-items: center; font-size: 30px;">Header</header>
+    <nav style="height: 5%; background-color: #2B967A; margin-bottom: 5px; display: flex; justify-content: center; align-items: center;">Main Nav</nav>
+
+    <section style="height: 70%; display: flex; gap: 5px;">
+        <div class="aside-left">
+            <div class="search" style="background-color: #2AC0E1;">Search</div>
+            <div class="social" style="background-color: #2B96CC;">Social Media</div>
+            <div class="news" style="background-color: #1986FF;">News Letter Sign up</div>
+        </div>
+        <div class="aside-center">
+            <div class="banner" style="background-color: #F15A25;">Banner</div>
+            <div class="copy" style="background-color: #F37D57;">Copy</div>
+            <div class="pro" style="background-color: #F25560;">Products</div>
+            <div class="copy" style="background-color: #F37D57;">Copy</div>
+            <div class="blog" style="background-color: #F36A5A;">Blog</div>
+        </div>
+        <div class="aside-right">
+            <div class="upper" style="display: flex; gap: 5px;">
+                <div class="categories" >
+                    <div style="background-color: #FDD900;">Categories</div>
+                    <div style="background-color: #FDE500;"></div>
+                    <div style="background-color: #F0FC00;"></div>
+                    <div style="background-color: #F8E600;"></div>
+                    <div style="background-color: #F5F056;"></div>
+                </div>
+                <div class="side-nav" style="background-color: #FFDE01;">Side Nav</div>
+            </div>
+            <div class="lower">
+                <div class="other" style="background-color: #FBC500;">other offers</div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="height: 13%; background-color: #2B8681; margin-top: 5px;">Footer</footer>
+
+</body>
+
+</html>
